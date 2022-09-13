@@ -4,7 +4,7 @@ $password =$_POST["pass"]
 
 $uppercase = preg_match('@[A-Z]@', $password);
 $lowercase = preg_match('@[a-z]@', $password);
-$number    = preg_match('@[0-9]@', $password);
+$number    = preg_match('@[0-15]@', $password);
 $specialChars = preg_match('@[^\w]@', $password);
 
 if(!$uppercase || !$lowercase || !$number || !$specialChars || strlen($password) < 8) {
